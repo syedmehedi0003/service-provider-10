@@ -14,11 +14,11 @@ const Service = ({ service }) => {
     }
 
     return (
-        <div className='service'>
+        <div className='service p-1'>
             <img className='w-100' src={img} alt="" />
-            <h2>{name}</h2>
+            <h2 className='py-2'>{name}</h2>
             <p>{amount}</p>
-            <p><small>{description}</small> </p>
+            <p><small className='p-1'>{description}</small> </p>
             <button onClick={() => navigateToServiceDetail(id)} className='btn btn-secondary btn-text'>Book Now</button>
         </div>
     );

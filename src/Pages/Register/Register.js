@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 
 const Register = () => {
@@ -62,11 +63,16 @@ const Register = () => {
 
 
 
-                <Button className="btn-text" variant="secondary" type="submit">
-                    Submit
+                <Button className="btn-text w-50 mt-3 d-block mx-auto" variant="secondary" type="submit">
+                    Register
                 </Button>
             </Form>
-            <p>Have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin} >Please Login</Link></p>
+            <div className='text-center mt-3'>
+                <p>Have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin} >Please Login Here</Link></p>
+            </div>
+
+
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

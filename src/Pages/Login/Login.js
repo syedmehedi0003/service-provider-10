@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
     // const refContainer = useRef(initialValue);
@@ -21,7 +22,8 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
+        navigate('/home');
     }
 
     const handleSubmit = event => {
@@ -54,11 +56,16 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button className="btn-text" variant="secondary" type="submit">
-                    Submit
+                <Button className="btn-text w-50 mt-3 d-block mx-auto" variant="secondary" type="submit">
+                    Login
                 </Button>
             </Form>
-            <p>New User? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <div className='text-center mt-3'>
+                <p>New User? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register Here</Link></p>
+            </div>
+
+
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

@@ -14,7 +14,7 @@ const Service = ({ service }) => {
     }
 
     return (
-        <div className='service p-1'>
+        <div className='service p-1 mb-3'>
             <img className='w-100' src={img} alt="" />
             <h2 className='py-2'>{name}</h2>
             <p>{amount}</p>

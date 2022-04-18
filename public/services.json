@@ -19,5 +19,26 @@
         "amount": "70 lakhs ",
         "description": "In 2021, Shakib Al Hasan Net Worth (Approximately) is 40 Million dollars Shakib Al Hasan Salary is 70 lakhs in BPL 2022.",
         "img": "image/sh3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Test Match",
+        "amount": "₹ 20,594.70",
+        "description": "Shakib Al Hasan made his test debut in 2007 against India. His breakthrough came in the Test against New Zealand in Chittagong in 2008. He picked up 7/36, which to date is the best figure by a Bangladeshi bowler",
+        "img": "image/sh5.webp"
+    },
+    {
+        "id": 5,
+        "name": "Brand Ambassador",
+        "amount": "2 crores ",
+        "description": "The leading global smart device brand OPPO has recently roped in the world’s no. 1 all-rounder Shakib Al Hasan as its new brand ambassador.Putting faith on the idea ‘Inspiration Ahead’, OPPO keeps the society and mankind.",
+        "img": "image/sh6.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Shakib Al Hasan TVc",
+        "amount": "70 lakhs ",
+        "description": "Top Bangladeshi Commercials Featuring Shakib Al Hasan 2 Min Read By Creative Desk < Share G in angladesh's all-around cricketer, Shakib Al Hasan has made quite a name for himself  but also as the role model for many aspiring cricketers and fans alike.",
+        "img": "image/sh7.jpg"
     }
 ]

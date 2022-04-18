@@ -1,9 +1,10 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className='text-center bg-dark text-light fixed-bottom pt-4'>
-            <h2>This is footer</h2>
+        <div className='sticky-bottom footer'>
+            <p className='text-center '>&copy; Copyrights reserved by Shakib Al Hasan. Developed by Syed Mehedi Hasan</p>
         </div>
     );
 };

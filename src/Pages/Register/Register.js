@@ -18,29 +18,29 @@ const Register = () => {
 
 
     const navigate = useNavigate();
-    let Passerror;
+    let PassError;
 
     const navigateLogin = () => {
         navigate('/login');
     }
     if (user) {
-        navigate('/home');
+        console.log('User:', user)
     }
 
-    const handleRegister = event => {
+    const handleRegister = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         if (password.length < 6) {
 
-            Passerror = <p className='text-danger'>Error: Password must be 6 gigits or more</p>
-
-
+            PassError = <p className='text-danger'>Error: Password must be 6 gigits or more</p>
         }
 
-        createUserWithEmailAndPassword(email, password);
-
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        console.log('Updated profile');
+        navigate('/home');
     }
 
     return (
@@ -64,7 +64,7 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" required />
                 </Form.Group>
-                {Passerror}
+                {PassError}
 
 
 

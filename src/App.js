@@ -11,6 +11,7 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Blog from './Pages/Blog/Blog';
 import Services from './Pages/Home/Services/Services';
+import Footer from './Pages/Shared/Footer/Footer';
 
 
 
@@ -37,6 +38,7 @@ function App() {
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
 
     </div>
   );

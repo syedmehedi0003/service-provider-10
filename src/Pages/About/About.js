@@ -5,9 +5,9 @@ import Myimg from '../../images/Myimg/myimg1.jpg';
 const About = () => {
     return (
         <div className='text-center'>
-            <img src={Myimg} alt="" />
-            <h4>Syed Mehedi Hasan</h4>
-            <p>I want to be a web developer.I try for this.And i will ready for this, after  six month i will be a web developer.In-Sha-Allah.</p>
+            <img className='myimg mt-3' src={Myimg} alt="" />
+            <h4>Hi, I am Syed Mehedi Hasan</h4>
+            <p>I want to be a web developer.I try for this and work hard.I will ready for this, after  six month i will be a web developer.In-Sha-Allah.</p>
         </div>
     );
 };

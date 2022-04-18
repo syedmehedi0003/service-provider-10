@@ -4,7 +4,8 @@ import './Blog.css'
 
 const Blog = () => {
     return (
-        <div className='p-4'>
+        <div className='p-3'>
+            <h2 className='text-center'>Blog</h2>
             <h4>Authentication Vs Authorization</h4>
             <h5>Authentication</h5>
             <p>Authentication is  process to prove something true or false, right or wrong.It is a process of verifying data.Like password,user-name, email, etc.. are verifying by authentication.</p>

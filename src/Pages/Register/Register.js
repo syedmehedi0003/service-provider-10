@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
@@ -13,10 +13,12 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateErrorerror] = useUpdateProfile(auth);
 
 
     const navigate = useNavigate();
+    let Passerror;
 
     const navigateLogin = () => {
         navigate('/login');
@@ -31,7 +33,10 @@ const Register = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         if (password.length < 6) {
-            <p>Plz enter 6 digit or more then password</p>
+
+            Passerror = <p className='text-danger'>Error: Password must be 6 gigits or more</p>
+
+
         }
 
         createUserWithEmailAndPassword(email, password);
@@ -59,7 +64,7 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" required />
                 </Form.Group>
-
+                {Passerror}
 
 
 
@@ -69,6 +74,7 @@ const Register = () => {
             </Form>
             <div className='text-center mt-3'>
                 <p>Have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin} >Please Login Here</Link></p>
+
             </div>
 
 

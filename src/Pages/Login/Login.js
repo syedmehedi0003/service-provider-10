@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css';
@@ -34,9 +34,18 @@ const Login = () => {
         signInWithEmailAndPassword(email, password);
     }
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
     const navigateRegister = event => {
         navigate('/register');
     }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        alert('Sent email');
+    }
+
 
     return (
         <div className='w-50 container mx-auto'>
@@ -60,6 +69,8 @@ const Login = () => {
             </Form>
             <div className='text-center mt-3'>
                 <p>New User? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register Here</Link></p>
+
+                <p>Forget Password? <Link to="" className='text-primary pe-auto text-decoration-none mt-0' onClick={resetPassword}>Reset Password</Link></p>
             </div>
 
 

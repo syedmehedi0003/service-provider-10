@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "One Day International(ODI)",
+        "amount": "3800 USD",
+        "description": "He cracked his first ODI ton against Canada in the tri-series played in the West Indies, just before the 2007 World Cup.",
+        "img": "image/sh4.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Indian Premier League(IPL)",
+        "amount": "2 crores ",
+        "description": "Shakib Al Hasan set a price of Rs. 2 crores for himself in IPL 2022 auction. In the previous season, he was part of Kolkata Knight Riders..",
+        "img": "image/sh1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Bangladesh Premier League(BPL)",
+        "amount": "70 lakhs ",
+        "description": "In 2021, Shakib Al Hasan Net Worth (Approximately) is 40 Million dollars Shakib Al Hasan Salary is 70 lakhs in BPL 2022.",
+        "img": "image/sh3.jpg"
+    }
+]

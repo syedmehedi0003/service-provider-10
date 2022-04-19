@@ -1,6 +1,6 @@
 # Assignment 10, Service provider
 
-## Assignment lonk [Click Here](https://service-provider-48aa5.web.app/)
+## Assignment link [Click Here](https://service-provider-48aa5.web.app/)
 
 ### Work Explanation  
 - React routes
